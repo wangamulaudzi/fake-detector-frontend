@@ -2,17 +2,6 @@
 
 This is the frontend service for the Fake Detector application, built with Streamlit.
 
-## Directory Structure
-fake-news-frontend/
-├── .streamlit/
-├── .gitignore
-├── .python-version
-├── Dockerfile
-├── README.md
-├── fake-detector.py
-├── requirements.txt
-├── service.yaml
-
 ## Local Setup
 
 1. Clone the repository:
