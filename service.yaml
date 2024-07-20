@@ -1,0 +1,26 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: fake-detector-frontend
+spec:
+  template:
+    metadata:
+      annotations:
+        client.knative.dev/user-image: gcr.io/fake-detector-427308/fake-detector-frontend:latest
+        run.googleapis.com/client-name: cloud-console
+      name: fake-detector-frontend-v1
+    spec:
+      containers:
+      - image: gcr.io/fake-detector-427308/fake-detector-frontend:latest
+        ports:
+        - containerPort: 8501
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: "1"
+        env:
+        - name: GCS_CREDENTIALS
+          valueFrom:
+            secretKeyRef:
+              name: streamlit_secrets
+              key: latest
