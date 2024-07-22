@@ -2,6 +2,7 @@
 
 This is the frontend service for the Fake Detector application, built with Streamlit.
 
+The app itself can be found [here](https://fake-detector-frontend-sfbmb7r2wa-ew.a.run.app/)
 The backend repo can be found [here](https://github.com/wangamulaudzi/fake-detector-backend).
 
 ## Local Setup
